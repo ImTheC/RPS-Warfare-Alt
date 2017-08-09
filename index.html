@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>RPS Warfare</title>
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Nova+Square" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/hexgrid.css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="css/circleMenu.css" media="screen" title="no title" charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+
+	<body>
+		<div class="modalbackground hide"></div>
+
+	<nav>
+		<ul>
+		  <li><a class="active">Home (version a0.5.0)</a></li>
+		  <li><a href="http://rpswarfare.imthec.com/">RESET GAME</a></li>
+		  <li><a target="_blank" href="https://github.com/ImTheC/RPS-Warfare/">GITHUB</a></li>
+		  <li><a href="http://rpswarfare.imthec.com/indexWswap.html">Try Version a0.6.0 w/ swapout on tie action</a></li>
+		</ul>
+	</nav>
+
+		<div id="message" class="message">
+			<p class="flow-text"></p>
+		</div>
+
+		<section id="reserve" class="menu-wrapper hide">
+			<button id="close" class="menu-btn">
+		    <i id="centerLock"></i>
+		    <i></i>
+		    <i></i>
+		    <span class="ripple"></span>
+		  </button>
+
+		  <ul class="menu">
+				<li class="menuitem-wrapper">
+					<div id="unit2" class="icon-holder hide">
+						<a href="#" class="menu-item">
+								<img class="icon" src="images/rock.png" alt="rock">
+						</a>
+					</div>
+					<svg class="circle-holder">
+						<circle r="88" cx="50%" cy="50%" fill="none">
+						</circle>
+					</svg>
+				</li>
+		    <li class="menuitem-wrapper">
+		      <div id="unit3" class="icon-holder hide">
+		        <a href="#" class="menu-item">
+		            <img class="icon" src="images/paper.png" alt="rock">
+		        </a>
+		      </div>
+		      <svg class="circle-holder">
+		        <circle r="88" cx="50%" cy="50%" fill="none">
+		        </circle>
+		      </svg>
+		    </li>
+		    <li class="menuitem-wrapper">
+		      <div id="unit4" class="icon-holder hide">
+		        <a href="#" class="menu-item">
+		            <img class="icon" src="images/scissors.png" alt="rock">
+		        </a>
+		      </div>
+		      <svg class="circle-holder">
+		        <circle r="88" cx="50%" cy="50%" fill="none">
+		        </circle>
+		      </svg>
+		    </li>
+		    <li class="menuitem-wrapper">
+		      <div id="unit5" class="icon-holder hide">
+		        <a href="#" class="menu-item">
+		            <img class="icon" src="images/rock.png" alt="rock">
+		        </a>
+		      </div>
+		      <svg class="circle-holder">
+		        <circle r="88" cx="50%" cy="50%" fill="none">
+		        </circle>
+		      </svg>
+		    </li>
+		    <li class="menuitem-wrapper">
+		      <div id="unit6" class="icon-holder hide">
+		        <a href="#" class="menu-item">
+		            <img class="icon" src="images/paper.png" alt="rock">
+		        </a>
+		      </div>
+		      <svg class="circle-holder">
+		        <circle r="88" cx="50%" cy="50%" fill="none">
+		        </circle>
+		      </svg>
+		    </li>
+		    <li class="menuitem-wrapper">
+		      <div id="unit1" class="icon-holder hide">
+		        <a href="#" class="menu-item">
+		            <img class="icon" src="images/scissors.png" alt="rock">
+		        </a>
+		      </div>
+		      <svg class="circle-holder">
+		        <circle r="88" cx="50%" cy="50%" fill="none">
+		        </circle>
+		      </svg>
+		    </li>
+		  </ul>
+		</section>
+
+		<ul id="grid" class="categories clr">
+
+		</ul>
+
+		<div class="spacer"></div>
+
+	</body>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/game.js"></script>
+</html>

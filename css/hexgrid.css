@@ -1,0 +1,352 @@
+body{
+	font-family: 'Roboto', sans-serif;
+  background:rgb(123, 158, 158);
+  perspective:1000px;
+}
+
+nav .active {
+    background-color: blue;
+}
+
+nav {
+	display: inline-block;
+	width: 98vw;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkblue;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+    background-color: #111;
+}
+
+
+
+
+.categories{
+  width:50%;
+  margin:0 auto;
+  transform:rotateX(45deg);
+  transform-style: preserve-3d;
+}
+
+.categories:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.categories li{
+  position:relative;
+	cursor:pointer;
+  list-style-type:none;
+  width:17.364%; /* = (100-4.5) / 5.5 */
+  padding-bottom: 20.05%; /* =  width /0.866 */
+  float:left;
+  overflow:hidden;
+  visibility:hidden;
+  transform: rotate(-60deg) skewY(30deg);
+}
+
+.categories li:nth-child(10n+6), .categories li:nth-child(10n+7), .categories li:nth-child(10n+8), .categories li:nth-child(10n+9), .categories li:nth-child(10n+10) {
+    margin-top: -4.2%;
+    margin-bottom: -4.2%;
+    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  }
+.categories li:nth-child(10n+6){
+    margin-left:0.5%;
+  }
+  .categories li:nth-child(5n+2) {
+    margin-left:1%;
+    margin-right:1%;
+  }
+  .categories li:nth-child(5n+3),.categories li:nth-child(5n+4){
+    margin-right:1%;
+  }
+
+.categories li div{
+  position:absolute;
+  visibility:visible;
+  width:100%; height:100%;
+  text-align:center;
+  color:#fff;
+  overflow:hidden;
+  transform: skewY(-30deg) rotate(60deg);
+  background-color:rgba(0,0,0,.2);
+  transition:background-color .3s;
+  border-left:2px solid #000;
+  border-right:2px solid #000;
+  box-sizing:border-box;
+  -webkit-backface-visibility:hidden;
+}
+.categories li div:hover, .categories .up:hover span:after{
+  background-color:rgba(0,0,0,.5);
+}
+.categories li div:before, .categories li div:after{
+  content:'';
+  position:absolute;
+  width:100%;height:49.6%;
+  left:-2px;top:25.5%;
+
+  border-left:2px solid #000;
+  border-right:2px solid #000;
+  transform:rotate(60deg);
+  visibility:visible;
+}
+.categories li div:before{
+    transform:rotate(-60deg);
+}
+
+.categories li img{
+  display:block;
+  left:-100%; right:-100%;
+  width: auto; height:100%;
+  margin:0 auto;
+  visibility:visible;
+}
+
+/* ####  UP  #### */
+.categories .up, .categories .up div{
+  transform-style:preserve-3d;
+  overflow:visible;
+  visibility:hidden;
+  background-color:transparent;
+}
+.categories .up span{
+  display:block;
+  width:100%;height:100%;
+  position:absolute;
+  top:0; left:0;
+  overflow:hidden;
+}
+.categories .up span:after{
+  content:'';
+  position:absolute;
+  left:0;top:0;
+  width:100%;height:100%;
+  border-left:2px solid #000;
+  border-right:2px solid #000;
+  box-sizing:border-box;
+  background-color:rgba(0,0,0,.2);
+  transform: skewY(-30deg) rotate(60deg);
+  transition:background-color .3s;
+  visibility:visible;
+}
+
+.categories .up img{
+
+	margin-top: 0px;
+  width:80%; height:auto;
+  position:absolute;
+  transform-origin: 40% 100%;
+  transform: rotateX(-45deg);
+  z-index:3;
+}
+
+.spacer {
+	height: 200px;
+}
+
+.categories li div.canMove{
+	background-color:rgba(0,255,0,.5) !important;
+}
+
+.categories li div.canMove:hover{
+	background-color:rgba(0,100,0,.5);
+}
+
+.categories li div.selected{
+	background-color:rgba(0,0,255,.5);
+}
+
+
+img.icon {
+	height: 40px;
+}
+
+.message {
+	font-family: 'Nova Square', cursive;
+	position: absolute;
+	display: none;
+	left: 15vw;
+	width: 70vw;
+	/*margin-left: 5%;
+	margin-right: 5%;*/
+	background-color: white;
+	border: 1px black solid;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.23);
+}
+
+.message p {
+	position: relative;
+	height: 95%;
+	width: 95%;
+	left: 2.5%;
+	top: -10px;
+}
+
+.flow-text {
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 360px) {
+  .flow-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 390px) {
+  .flow-text {
+    font-size: 1.224rem;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .flow-text {
+    font-size: 1.248rem;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .flow-text {
+    font-size: 1.272rem;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .flow-text {
+    font-size: 1.296rem;
+  }
+}
+
+@media only screen and (min-width: 510px) {
+  .flow-text {
+    font-size: 1.32rem;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .flow-text {
+    font-size: 1.344rem;
+  }
+}
+
+@media only screen and (min-width: 570px) {
+  .flow-text {
+    font-size: 1.368rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .flow-text {
+    font-size: 1.392rem;
+  }
+}
+
+@media only screen and (min-width: 630px) {
+  .flow-text {
+    font-size: 1.416rem;
+  }
+}
+
+@media only screen and (min-width: 660px) {
+  .flow-text {
+    font-size: 1.44rem;
+  }
+}
+
+@media only screen and (min-width: 690px) {
+  .flow-text {
+    font-size: 1.464rem;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .flow-text {
+    font-size: 1.488rem;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .flow-text {
+    font-size: 1.512rem;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .flow-text {
+    font-size: 1.536rem;
+  }
+}
+
+@media only screen and (min-width: 810px) {
+  .flow-text {
+    font-size: 1.56rem;
+  }
+}
+
+@media only screen and (min-width: 840px) {
+  .flow-text {
+    font-size: 1.584rem;
+  }
+}
+
+@media only screen and (min-width: 870px) {
+  .flow-text {
+    font-size: 1.608rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .flow-text {
+    font-size: 1.632rem;
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .flow-text {
+    font-size: 1.656rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .flow-text {
+    font-size: 1.68rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .flow-text {
+    font-size: 1.2rem;
+  }
+}
+
+.notAllowed {
+	cursor:not-allowed !important;
+};
+
+.clickable {
+
+}
+
+.noTouchy {
+	pointer-events: none;
+}
